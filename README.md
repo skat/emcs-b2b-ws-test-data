@@ -26,11 +26,13 @@ The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3 EMCS V
 SKAT provides a test system that runs all EMCS B2B Web Services and allows companies (and their system integrators) to
 develop and test solutions that integrate with SKAT's EMCS System. This test system is pre configured with
 test data for the company with central registration number (CVR) 30808460 and a set of Authorized Tax Warehouses, 
-Consignees, and Consignors. SKAT help desk provides details with regards to the X.509 certificate that identifies this
-CVR number and is authorized to communicate with the EMCS B2B Web Services in test system.
+Consignees, and Consignors. 
 
-The test system is pre configured with Authorized Tax Warehouses, Consignees, and Consignors that all have delegated
-authorizations (roles) to the company with CVR 30808460. Consequently, the `VirksomhedIdentifikationStruktur` part in the
+SKAT Help Desk provides details with regards to the X.509 certificate that identifies this CVR number (30808460) *and* 
+is authorized to communicate with the EMCS B2B Web Services in test system.
+
+The test system is pre configured with **Authorized Tax Warehouses**, **Consignees**, and **Consignors** that all have 
+delegated authorizations (roles) to the company with CVR 30808460. Consequently, the `VirksomhedIdentifikationStruktur` part in the
 SOAP request must reflect this configuration by setting the value `30808460` in the field `VirksomhedSENummerIdentifikator` 
 and the **Excise Number** in the field `AfgiftOperatoerPunktAfgiftIdentifikator`.
 
@@ -46,10 +48,12 @@ and the **Excise Number** in the field `AfgiftOperatoerPunktAfgiftIdentifikator`
 ```
 
 The available Authorized Tax Warehouses, Consignees, and Consignors are documented in the following sections.
-Please note that the the test material reflects a transaction between to Danish economical operators where as in
-production the other party is always another EU Member State.
 
-**Important note**: In the test environment all fields with dates and times must be set to GMT time. The production, however, runs in CET time.
+**Important Notes**: 
+
+* The test material reflects a transaction between to Danish economical operators where as in production the other party is always another EU Member State.
+* In the test environment all fields with dates and times must be set to GMT time. The production, however, runs in CET time.
+
 
 ### Test Entities
 
@@ -395,7 +399,7 @@ sample/ie815-invalid.xml fails to validate
 
 ### Validating all sample documents
 
-Assumes  `xmllint` tool has been installed. Then run:
+Assumes  `xmllint` tool has been installed. Then run the `validate.sh` script:
 
 ```
 $ ./validate.sh
@@ -411,7 +415,7 @@ sample/ie871.xml validates
 
 ### Using Docker Container
 
-Step 1: Build container
+**Step 1**: Build container
 
 ```sh
 $ sudo ./docker-build.sh 
@@ -443,18 +447,10 @@ Removing intermediate container 75a58a3673fa
 Successfully built 7f337aa90995
 ```
 
-Step 2: Run container
+**Step 2**: Run container
 
 ```sh
 $ sudo ./docker-run.sh 
-sample/ie815.xml validates
-sample/ie818.xml validates
-sample/ie810.xml validates
-sample/ie813.xml validates
-sample/ie819.xml validates
-sample/ie825.xml validates
-sample/ie837.xml validates
-sample/ie871.xml validates
 sample/ie815.xml validates
 sample/ie818.xml validates
 sample/ie810.xml validates
