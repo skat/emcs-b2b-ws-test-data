@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t skat/emcs-ie-document-validation:1.0 .
+docker build -t skat/emcs-b2b-ws-test-data-validation:1.0 .

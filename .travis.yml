@@ -2,3 +2,5 @@ language: bash
 
 script:
   - echo "Script started..."
+  # Validate sample documents using Travis CI
+  - ./validate.sh
