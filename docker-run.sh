@@ -1,4 +1,4 @@
 #!/bin/sh
 
-docker run -d --name emcs-ie-document-validation \
-            skat/emcs-ie-document-validation:1.0
+docker run --name emcs-b2b-ws-test-data-validation \
+            skat/emcs-b2b-ws-test-data-validation:1.0

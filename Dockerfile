@@ -1,12 +1,12 @@
 FROM oraclelinux:7
-MAINTAINER Christopher Derek Curry
+MAINTAINER SKAT
 
 ADD schema /tmp/schema
-ADD xml /tmp/xml
-RUN ls -la /tmp/schema
+ADD sample /tmp/sample
 ADD validate.sh /tmp/validate.sh
 RUN chmod a+x /tmp/validate.sh
+WORKDIR /tmp
 
-CMD /tmp/validate.sh
+CMD "./validate.sh"
 
 
