@@ -1,4 +1,4 @@
 language: bash
 
 script:
-  - echo "Script started"
+  - echo "Script started..."
