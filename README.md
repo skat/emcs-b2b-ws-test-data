@@ -1,13 +1,25 @@
 # EMCS B2B Web Services Test Data
 
-[![Build Status](https://travis-ci.com/skat/emcs-b2b-ws-test-data.svg?token=pXpLRS1qCgHe3KVdbFyA&branch=master)](https://travis-ci.com/skat/emcs-b2b-ws-test-data) ![EUXSD](https://img.shields.io/badge/Current%20IE%20Schema%20Version-1.76-green.svg)
+[![Build Status](https://travis-ci.com/skat/emcs-b2b-ws-test-data.svg?token=pXpLRS1qCgHe3KVdbFyA&branch=master)](https://travis-ci.com/skat/emcs-b2b-ws-test-data) ![EUXSD](https://img.shields.io/badge/EC%20DGTAXUD%20EMCS%20PHASE3%20EMCS-1.76-green.svg)
+
+### Table of contents
+
+* [Preface](#preface)
+* [Test Data](#test-data)
+  * [Test Entities](#test-entities)
+  * [Sample Documents](#sample-documents)
+* [Validating IE Documents](#validating-ie-documents)
+  * [Using Command Line Validation](#using-command-line-validation)
+  * [Using Docker Container](#using-docker-container)
+
+## Preface
 
 This repository provides:
 
 * Test data for developing and testing solutions that integrate with SKAT's EMCS System
 * Instructions and tools for validating IE documents
 
-The sample documents provided herein comply with EC DGTAXUD EMCS PHASE3 EMCS V1.76 schemas.
+The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3 EMCS V1.76** schemas.
 
 ## Test Data
 
@@ -43,6 +55,8 @@ production the other party is always another EU Member State.
 
 #### Authorized Warehouse Keeper DK31175143300
 
+---
+
 **Excise Number**: DK31175143300
 
 **Role**: Authorized Warehouse Keeper
@@ -72,6 +86,8 @@ production the other party is always another EU Member State.
 ```
 
 #### Authorized Warehouse Keeper DK31174279300
+
+---
 
 **Excise Number**: DK31174279300
 
@@ -103,6 +119,8 @@ production the other party is always another EU Member State.
 
 #### Authorized Warehouse Keeper DK99025875300
 
+---
+
 **Excise Number**: DK99025875300
 
 **Role**: Authorized Warehouse Keeper
@@ -132,6 +150,8 @@ production the other party is always another EU Member State.
 ```
 
 #### Authorized Warehouse Keeper DK82065873300
+
+---
 
 **Excise Number**: DK82065873300
 
@@ -175,6 +195,8 @@ production the other party is always another EU Member State.
 
 #### Authorized Warehouse Keeper DK82065849300
 
+---
+
 **Excise Number**: DK82065849300
 
 **Role**: Authorized Warehouse Keeper
@@ -216,6 +238,8 @@ production the other party is always another EU Member State.
 
 #### Consignee DK82065849200
 
+---
+
 **Excise Number**: DK82065849200
 
 **Role**: Consignee
@@ -234,6 +258,8 @@ production the other party is always another EU Member State.
 
 #### Consignee DK82070478200
 
+---
+
 **Excise Number**: DK82070478200
 
 **Role**: Consignee
@@ -250,6 +276,8 @@ production the other party is always another EU Member State.
 <City>Helsingør</City>
 ```
 #### Consignee DK99025875200
+
+---
 
 **Excise Number**: DK99025875200
 
@@ -269,6 +297,8 @@ production the other party is always another EU Member State.
 
 #### Consignee DK31174341200
 
+---
+
 **Excise Number**: DK31174341200
 
 **Role**: Consignee
@@ -285,6 +315,8 @@ production the other party is always another EU Member State.
 ```
 
 #### Consignor DK99025875100
+
+---
 
 **Excise Number**: DK99025875100
 
@@ -303,6 +335,8 @@ production the other party is always another EU Member State.
 ```
 
 #### Consignor DK82070486100
+
+---
 
 **Excise Number**: DK82070486100
 
@@ -334,7 +368,7 @@ production the other party is always another EU Member State.
 
 ## Validating IE Documents
 
-### Command Line Validation
+### Using Command Line Validation
 
 On Linux based systems install the `xmllint` tool, e.g. on Ubuntu:
 
@@ -377,9 +411,57 @@ sample/ie871.xml validates
 
 ### Using Docker Container
 
-Step 1: `docker-build.sh`
+Step 1: Build container
 
-Step 2: `docker-run.sh`
+```sh
+$ sudo ./docker-build.sh 
+Sending build context to Docker daemon  888.3kB
+Step 1/8 : FROM oraclelinux:7
+ ---> f6a4b5a3a7c7
+Step 2/8 : MAINTAINER SKAT
+ ---> Using cache
+ ---> 374a5ce7239b
+Step 3/8 : ADD schema /tmp/schema
+ ---> Using cache
+ ---> 6dcce52fad95
+Step 4/8 : ADD sample /tmp/sample
+ ---> Using cache
+ ---> bbec8c86d503
+Step 5/8 : ADD validate.sh /tmp/validate.sh
+ ---> Using cache
+ ---> bb5071eded02
+Step 6/8 : RUN chmod a+x /tmp/validate.sh
+ ---> Using cache
+ ---> 1ac367be1d5b
+Step 7/8 : WORKDIR /tmp
+ ---> Using cache
+ ---> 729d1a5b5e69
+Step 8/8 : CMD "./validate.sh"
+ ---> Running in 75a58a3673fa
+ ---> 7f337aa90995
+Removing intermediate container 75a58a3673fa
+Successfully built 7f337aa90995
+```
 
-Step 3: Check output
+Step 2: Run container
+
+```sh
+$ sudo ./docker-run.sh 
+sample/ie815.xml validates
+sample/ie818.xml validates
+sample/ie810.xml validates
+sample/ie813.xml validates
+sample/ie819.xml validates
+sample/ie825.xml validates
+sample/ie837.xml validates
+sample/ie871.xml validates
+sample/ie815.xml validates
+sample/ie818.xml validates
+sample/ie810.xml validates
+sample/ie813.xml validates
+sample/ie819.xml validates
+sample/ie825.xml validates
+sample/ie837.xml validates
+sample/ie871.xml validates
+```
 
