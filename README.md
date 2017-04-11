@@ -67,7 +67,7 @@ The available Authorized Tax Warehouses, Consignees, and Consignors are document
 
 **Authorized Product Types**: E, B
 
-**Address information**
+**Address Information**
 
 ```xml
 <TraderName>eService FKT-TEST BLAA 0013</TraderName>
@@ -387,7 +387,7 @@ $ xmllint --schema schema/ie815.xsd sample/ie815.xml
 sample/ie815.xml validates
 ```
 
-Sample output when validating the invalid document `schema/ie815-invalid.xml`:
+Sample output when validating the invalid document `sample/ie815-invalid.xml`:
 
 ```
 $ xmllint --noout --schema schema/ie815.xsd sample/ie815-invalid.xml
