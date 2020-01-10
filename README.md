@@ -19,7 +19,7 @@ This repository provides:
 * Test data for developing and testing solutions that integrate with SKAT's EMCS System
 * Instructions and tools for validating IE documents
 
-The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3 EMCS V1.92** schemas.
+The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3.4 EMCS V2.02** schemas.
 
 ## Test Data
 
@@ -392,7 +392,7 @@ Sample output when validating the invalid document `sample/ie815-invalid.xml`:
 ```
 $ xmllint --noout --schema schema/ie815.xsd sample/ie815-invalid.xml
 sample/ie815-invalid.xml:27: element TraderName: Schemas validity error : 
-Element '{urn:publicid:-:EC:DGTAXUD:EMCS:PHASE3:IE815:V1.76}TraderName': This element is not expected. Expected is 
+Element '{urn:publicid:-:EC:DGTAXUD:EMCS:PHASE3:IE815:V2.02}TraderName': This element is not expected. Expected is 
 ( {urn:publicid:-:EC:DGTAXUD:EMCS:PHASE3:IE815:V1.76}TraderExciseNumber ).
 sample/ie815-invalid.xml fails to validate
 ```
