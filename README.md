@@ -1,6 +1,6 @@
 # EMCS B2B Web Services Test Data
 
-[![Build Status](https://travis-ci.com/skat/emcs-b2b-ws-test-data.svg?token=pXpLRS1qCgHe3KVdbFyA&branch=master)](https://travis-ci.com/skat/emcs-b2b-ws-test-data) ![EUXSD](https://img.shields.io/badge/EC%20DGTAXUD%20EMCS%20PHASE3%20EMCS-1.92-green.svg)
+[![Build Status](https://travis-ci.com/skat/emcs-b2b-ws-test-data.svg?token=pXpLRS1qCgHe3KVdbFyA&branch=master)](https://travis-ci.com/skat/emcs-b2b-ws-test-data) ![EUXSD](https://img.shields.io/badge/EC%20DGTAXUD%20EMCS%20PHASE3%20EMCS-2.02-green.svg)
 
 ### Table of contents
 
