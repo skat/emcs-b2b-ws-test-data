@@ -73,7 +73,7 @@
                 <ns26:Quantity>100</ns26:Quantity>
                 <ns26:GrossWeight>100</ns26:GrossWeight>
                 <ns26:NetWeight>99</ns26:NetWeight>
-                <ns26:AlcoholicStrength>12</ns26:AlcoholicStrength>
+                <ns26:AlcoholicStrengthByVolumeInPercentage>12</ns26:AlcoholicStrengthByVolumeInPercentage>
                 <ns26:FiscalMark language="da">Nix</ns26:FiscalMark>
                 <ns26:FiscalMarkUsedFlag>1</ns26:FiscalMarkUsedFlag>
                 <ns26:DesignationOfOrigin language="da">Tjo</ns26:DesignationOfOrigin>
