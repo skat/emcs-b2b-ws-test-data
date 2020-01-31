@@ -1,6 +1,6 @@
 # EMCS B2B Web Services Test Data
 
-[![Build Status](https://travis-ci.com/skat/emcs-b2b-ws-test-data.svg?token=pXpLRS1qCgHe3KVdbFyA&branch=master)](https://travis-ci.com/skat/emcs-b2b-ws-test-data) ![EUXSD](https://img.shields.io/badge/EC%20DGTAXUD%20EMCS%20PHASE3%20EMCS-1.92-green.svg)
+[![Build Status](https://travis-ci.com/skat/emcs-b2b-ws-test-data.svg?token=pXpLRS1qCgHe3KVdbFyA&branch=master)](https://travis-ci.com/skat/emcs-b2b-ws-test-data) ![EUXSD](https://img.shields.io/badge/EC%20DGTAXUD%20EMCS%20PHASE3%20EMCS-2.02-green.svg)
 
 ### Table of contents
 
@@ -19,7 +19,7 @@ This repository provides:
 * Test data for developing and testing solutions that integrate with SKAT's EMCS System
 * Instructions and tools for validating IE documents
 
-The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3.4 EMCS V2.02** schemas.
+The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3 EMCS V2.02** schemas.
 
 ## Test Data
 
