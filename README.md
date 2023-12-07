@@ -25,15 +25,15 @@ The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE3 EMCS V
 
 SKAT provides a test system that runs all EMCS B2B Web Services and allows companies (and their system integrators) to
 develop and test solutions that integrate with SKAT's EMCS System. This test system is pre configured with
-test data for the company with central registration number (CVR) 30808460 and a set of Authorized Tax Warehouses, 
+test data for the company with central registration number (CVR) 19552101 and a set of Authorized Tax Warehouses, 
 Consignees, and Consignors. 
 
-SKAT Help Desk provides details with regards to the X.509 certificate that identifies this CVR number (30808460) *and* 
+SKAT Help Desk provides details with regards to the X.509 certificate that identifies this CVR number (19552101) *and* 
 is authorized to communicate with the EMCS B2B Web Services in test system.
 
 The test system is pre configured with **Authorized Tax Warehouses**, **Consignees**, and **Consignors** that all have 
-delegated authorizations (roles) to the company with CVR 30808460. Consequently, the `VirksomhedIdentifikationStruktur` part in the
-SOAP request must reflect this configuration by setting the value `30808460` in the field `VirksomhedSENummerIdentifikator` 
+delegated authorizations (roles) to the company with CVR 19552101. Consequently, the `VirksomhedIdentifikationStruktur` part in the
+SOAP request must reflect this configuration by setting the value `19552101` in the field `VirksomhedSENummerIdentifikator` 
 and the **Excise Number** in the field `AfgiftOperatoerPunktAfgiftIdentifikator`.
 
 **Example**: A SOAP Request with **Excise Number** = DK31175143300
@@ -41,7 +41,7 @@ and the **Excise Number** in the field `AfgiftOperatoerPunktAfgiftIdentifikator`
 ```xml
 <VirksomhedIdentifikationStruktur>
   <Indberetter>
-    <VirksomhedSENummerIdentifikator>30808460</VirksomhedSENummerIdentifikator> 
+    <VirksomhedSENummerIdentifikator>19552101</VirksomhedSENummerIdentifikator> 
   </Indberetter>
   <AfgiftOperatoerPunktAfgiftIdentifikator>DK31175143300</AfgiftOperatoerPunktAfgiftIdentifikator> 
 </VirksomhedIdentifikationStruktur>
