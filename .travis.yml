@@ -1,9 +1,9 @@
 language: bash
 
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt install jq
-  - sudo apt install libxml2-utils
+  - sudo apt-get -qq update
+  - sudo apt install jq
+  - sudo apt install libxml2-utils
   
 script:
   - echo "Script started..."
