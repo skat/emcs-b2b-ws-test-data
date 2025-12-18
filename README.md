@@ -17,7 +17,7 @@ This repository provides:
 * Test data for developing and testing solutions that integrate with SKAT's EMCS System
 * Instructions and tools for validating IE documents
 
-The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE4 EMCS V3.13** schemas.
+The sample documents provided herein comply with **EC DGTAXUD EMCS PHASE4 EMCS V3.23** schemas.
 
 ## Test Data
 
